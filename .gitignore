@@ -1,4 +1,6 @@
+.mixin.out
 logs
 world
 l_m_modded_*
 crafttweaker.log
+usercache.json
