@@ -1,7 +1,7 @@
 reset_server()
 {
     echo "Resetting server..."
-    rm -rf world/ logs/ crash-reports/ l_m_modded_*/
+    rm -rf world/ logs/ crash-reports/ l_m_modded_*/ backups/
 }
 
 stage_mods()
