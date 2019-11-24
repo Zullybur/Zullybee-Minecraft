@@ -6,7 +6,7 @@ reset_server()
 
 stage_mods()
 {
-    if [ $(ls /mnt/c/Users/mattc/Downloads/ | grep ".jar") ]; then
+    if [ "$(ls /mnt/c/Users/mattc/Downloads/ | grep ".jar")" ]; then
         echo "Staging mods..."
         mv /mnt/c/Users/mattc/Downloads/*.jar ../mod-staging/
     fi
