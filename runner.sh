@@ -32,11 +32,22 @@ launch_server()
 
 show_help()
 {
-    echo "Usage: ./runner.sh [reset, stage-mods, staged-mods commit-mods, launch, all]"
+    echo "Usage: ./runner.sh [reset, rm-mod, stage-mods, staged-mods commit-mods, launch, all]"
+}
+
+rm_mod()
+{
+    if [ -n "$1" ]; then
+        echo "Removing $1"
+        rm mods/$1 ../mod-staging/$1
+    else
+        echo "No filename provided"
+    fi
 }
 
 case $1 in
     reset )         reset_server;;
+    rm-mod )        rm_mod $2;;
     stage-mods )    stage_mods;;
     staged-mods )   staged_mods;;
     commit-mods )   commit_mods;;
